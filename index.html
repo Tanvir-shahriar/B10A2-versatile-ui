@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versatile Gym UI</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.getElementById('nav-links');
+      
+        menuIcon.addEventListener('click', () => {
+          navLinks.style.display = (navLinks.style.display === 'flex') ? 'none' : 'flex';
+        });
+      </script>
+      
+</head>
+<body class="inter-font">
+    <header>
+        <nav class="navbar">
+            <a class="fitness" href="">Fitness</a>
+            <div class="menu-icon" id="menu-icon">
+                &#9776; <!-- This renders ☰ -->
+              </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="">Home</a></li>
+                <li><a href="">Service</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">About</a></li>
+            </ul>
+        </nav>
+        <div class="hero-section">
+            <div class="hero-container">
+                <h1 class="title hero-title">Get body in <br> <span class="great-vibes-regular ">shape</span> & stay <br> healthy</h1>
+                <p class="description">A huge selection of health and fitness content, healthy recipes <br> and transformation stories to help you get fit and stay fit!</p>
+                <div class="links">
+                    <a href="">Join Club Now!</a>
+                    <a href="">Download App</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-container">
+                    <img src="images/Images 2.png" alt=""></div>
+                <div class="small-box first-box">
+                    <h1>500+</h1>
+                    <p class="box-description">Free Workout Videos</p></div>
+                <div class="small-box flex second-box">
+                    <div class="red-circle"></div>
+                    <div>
+                        <h2>350+</h2>
+                        <p class="box-description">Video Tutorial</p>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </header>
+    
+</body>
+</html>

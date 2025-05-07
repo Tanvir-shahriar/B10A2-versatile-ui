@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+.great-vibes-regular {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.inter-font {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  /* shared styles */
+  body{
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  header{
+    background: linear-gradient(145deg, #000 0%, #111 50%, #000 100%);
+  }
+
+/* font shared colors */
+.title{
+    color: rgb(255, 255, 255);
+    font-size: 2.9rem;
+    font-weight: 900;
+    line-height: 120%;
+    letter-spacing: 0%;
+}
+.description{
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 24px;
+    margin: 14px 0px;
+}
+
+  /* nav bar styling */
+  .menu-icon{
+    display: none;
+  }
+  .navbar{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  .nav-links{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 39px;
+    padding: 10px 0px;
+  }
+  .nav-links li{
+    list-style: none;
+  }
+  .nav-links a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.12rem;
+    color: rgb(255, 255, 255);
+    padding: 10px 15px;
+  }
+  .nav-links a:hover{
+    border-radius: 2.8rem;
+    background: rgb(230, 83, 60);
+  }
+  .fitness{
+    text-decoration: none;
+    color: rgb(230, 83, 60);
+    font-family: Inter;
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+/* hero section */
+.hero-section{
+    display: flex;
+    max-width: 80%;
+    margin: 50px auto 0px auto;
+}
+.hero-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.links{
+    display: flex;
+    gap: 12px;
+}
+.links a{
+    display: block;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 42px;
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
+}
+.links a:hover{
+    background: rgb(230, 83, 60);
+}
+.hero-section > div{
+    width: 50%;
+}
+.hero-image img{
+    position: relative;
+    right: -120px;
+}
+.shape{
+    font-weight: 100;
+}
+.hero-title{
+    font-size: 4.9rem;
+}
+.hero-section .description{
+    margin-top: 28px;
+}
+/* small box styling */
+.red-circle{
+    height: 25px;
+    width: 25px;
+    background-color: red;
+    border-radius: 50%;
+}
+.small-box{
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: rgb(255, 255, 255);
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.1);
+    width: 12%;
+    padding: 5px;
+    position: absolute;
+    z-index: 3;
+     
+}
+.first-box{
+    top: 250px;
+    right: 180px;
+    text-align: center;
+}
+.second-box{
+    top: 500px;
+
+}
+.flex{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+  /* responsive design */
+  /* mobile screen */
+    @media screen and (max-width: 768px) {
+        .menu-icon {
+            display: flex;
+            align-items: center;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: white;
+          }
+          .title{
+            font-size: 3rem;
+          }
+          .nav-links {
+            display: none;
+          }
+          /* hero section styling*/
+        .hero-section{
+            flex-direction: column;
+        }
+        .hero-section > div{
+            width: 100%;
+        }
+        .hero-image img{
+            right: 0px;
+        }
+         /* small box */
+         .small-box{
+            width: 35%;
+        }
+        .first-box{
+            top: 41rem;
+            right: 2rem;
+        }
+        .second-box{
+            top: 60rem;
+        
+        }
+        
+        
+    }
+    /* tablet screen */
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+        .hero-section{
+            flex-direction: column;
+        }
+        .hero-section > div{
+            width: 100%;
+        }
+        .first-box{
+            top: 650px;
+            right: 180px;
+        }
+        .second-box{
+            top: 950px;
+        
+        }
+        .hero-container{
+            align-items: center;
+            text-align: center;
+        }
+        /* small box */
+        .small-box{
+            width: 20%;
+        }
+        .image-container img{
+            margin: 0 auto;
+            border: 1px solid red;
+        }
+        
+    }
