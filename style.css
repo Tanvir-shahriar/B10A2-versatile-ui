@@ -16,10 +16,23 @@
   body{
     max-width: 1440px;
     margin: 0 auto;
+    background-color: black;
   }
   header{
     background: linear-gradient(145deg, #000 0%, #111 50%, #000 100%);
   }
+
+  /* habits, run, training */
+    .habits h2, .run h2, .training h2, .bmi h2, .team h2{
+        font-size: 3rem;
+    }
+    .text-container, .run-container, .training-container, .bmi-container, .team-container{
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+    }
+
+
 
 /* font shared colors */
 .title{
@@ -57,6 +70,7 @@
   .nav-links li{
     list-style: none;
   }
+
   .nav-links a{
     text-decoration: none;
     color: black;
@@ -64,7 +78,7 @@
     color: rgb(255, 255, 255);
     padding: 10px 15px;
   }
-  .nav-links a:hover{
+  .nav-links a:hover {
     border-radius: 2.8rem;
     background: rgb(230, 83, 60);
   }
@@ -108,6 +122,7 @@
 .hero-section > div{
     width: 50%;
 }
+
 .hero-image img{
     position: relative;
     right: -120px;
@@ -121,7 +136,7 @@
 .hero-section .description{
     margin-top: 28px;
 }
-/* small box styling */
+
 .red-circle{
     height: 25px;
     width: 25px;
@@ -143,7 +158,7 @@
 }
 .first-box{
     top: 250px;
-    right: 180px;
+    
     text-align: center;
 }
 .second-box{
@@ -155,8 +170,437 @@
     align-items: center;
     gap: 10px;
 }
+/* habit section */
+.habits{
+    max-width: 80%;
+    margin: 90px auto;
+}
+
+.habit-images{
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+}
+.habit-images img{
+    
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+.habit-images h5{
+    font-size: 1.2rem;
+    }
+
+
+    /* run section */
+    .run{
+        max-width: 80%;
+        margin: 150px auto;
+        display: flex;
+        justify-content: space-around;
+        border-radius: 18px;
+        background: rgb(34, 34, 34);
+        padding: 30px 15px;
+    }
+    .run > div{
+        width: 50%;
+    }
+    .run-image{
+        text-align: right;
+        margin-top: 20px;
+    }
+    .run-image img{
+        width: 60%;
+        height: 90%;
+        border-radius: 20px;
+        margin-right: 10px;
+        
+    }
+    .run-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0px 20px;
+        text-align: left;
+    }
+
+    .run-container a{
+        display: flex;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        padding: 10px 15px;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 42px;
+        margin-top: 10px;
+        width: 30%;
+        text-align: center;
+        
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .run-container a:hover{
+         background: rgb(230, 83, 60);
+    }
+    /* training section */
+    .training{
+        max-width: 80%;
+        margin: 90px auto;
+    }
+    .training-container{
+        text-align: left;
+    }
+
+    .row-1{
+        display: grid;
+        grid-template-columns: 25% 45% 30%;
+    }
+    .row-2{
+        display: grid;
+        grid-template-columns: 40% 30% 30%;
+    }
+    .training-images img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .image-box{
+        /* position: relative; */
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .image-box img{
+        z-index: 0;
+    }
+    .image-box p {
+    
+    position: relative;
+    color: white;
+    top: -50px;
+    left: 10px;
+    z-index: 2;
+    
+
+    }
+
+    /* colors */
+    /* Green filter effect */
+.image-box.green img {
+    filter: brightness(0.8) sepia(0.5) saturate(600%) hue-rotate(120deg);
+}
+
+/* Blue filter effect */
+.image-box.blue img {
+    filter: brightness(0.8) sepia(0.1) saturate(300%) hue-rotate(130deg);
+}
+
+
+/* Black filter effect */
+.image-box.black img {
+    filter: brightness(1) contrast(1.5);
+}
+
+/* Grey filter effect */
+.image-box.grey img {
+    filter: brightness(0.9) contrast(1.3) grayscale(1);
+}
+
+/* Red filter effect */
+.image-box.red img {
+    filter: brightness(0.8) sepia(0.8) saturate(900%) hue-rotate(5deg);
+}
+
+    /* bmi section */
+    .bmi-container .description{
+        text-align: center;
+    }
+    .bmi-calculator{
+        background: rgb(34, 34, 34);
+    }
+    .bmi-table{
+        border-collapse: collapse;
+        margin-top: 30px;
+        
+    }
+    th, td{
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.5);
+        padding: 10px 20px;
+    }
+    .calculator-container{
+        display: flex;
+        max-width: 80%;
+        margin: 0 auto;
+        padding: 100px;
+    }
+    .calculator-container > div{
+        width: 50%;
+    }
+    .calculator-item h3{
+        font-size: 1.75rem;
+        color: white;
+    }
+    /* form styles */
+    .bmi-form {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.bmi-flex{
+    display: flex;
+    gap: 10px;
+}
+ .bmi-flex input[type="text"]{
+    width: 100%;
+
+ }
+
+.input-group {
+    width: 48%; /* To leave a small gap between the inputs */
+}
+
+/* Input field styles */
+.input-group input, 
+.input-group select {
+    margin: 5px;
+    width: 100%;  /* Ensures each input/select takes up 100% of the input-group width */
+    padding: 10px;
+    font-size: 16px;
+    
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+    border: none;
+}
+
+/* Input focus effect */
+.input-group input:focus, 
+.input-group select:focus {
+    border-color: #007bff;
+}
+.input-group-2 select {
+    margin: 5px 5px;
+    width: 98%;  /* Ensures each input/select takes up 100% of the input-group width */
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+    border: none;
+}
+.input-group input::placeholder {
+  color: #888;
+}
+/* Style for the dropdown background when it's focused */
+.input-group-2 select:focus {
+    background: rgba(255, 255, 255, 0.1);  /* Light transparent background when focused */
+    border-color: rgba(255, 255, 255, 0.1);  /* Optional: Change the border color for focus effect */
+    outline: none;  /* Remove default outline */
+}
+
+/* Style for the dropdown background when it's open */
+.input-group-2 select option:checked {
+    background: rgba(255, 255, 255, 0.1);  /* Transparent background for the selected option */
+}
+
+/* Style for the dropdown options */
+.input-group select option, .input-group-2 select option {
+    background: rgba(255, 255, 255, 0.1); /* Light transparent background for the options */
+    color: #333;  /* Ensure text is readable */
+}
+
+.calculate-btn {
+    margin: 5px auto;
+    width: 30%;
+    background-color: #f25c5c;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.calculate-btn:hover {
+  background-color: #e04d4d;
+}
+.result{
+    display: flex;
+    justify-content: space-around;
+}
+.result h3{
+    font-size: 1.2rem;
+    margin: 10px;
+    text-align: left;
+}
+ #weightStatus{
+    font-size: 1.2rem;
+    margin: 10px;
+    color: white;
+ }
+
+ /* team section */
+ .team-container{
+    margin-top: 50px;
+ }
+ .trainer-images{
+    max-width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 18px; 
+    margin-bottom: 40px; 
+ }
+ .trainer-images img{
+    width: 100%;
+    height: 280px;
+    border-radius: 18px;
+ }
+.trainer-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+.trainer-details {
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+    color: white;
+    text-align: left;
+    padding: 10px;
+    margin: 0px;
+    border-radius: 8px;
+    line-height: 0px;
+}
+.trainer-details h4{
+    font-size: 1.2rem;
+}
+ /* footer section */
+ .footer{
+    background: rgba(255, 255, 255, 0.1);
+ }
+    .footer-container{
+        padding: 30px;
+        max-width: 80%;
+        margin: 0 auto;
+        padding-top: 60px;
+        display: grid;
+        grid-template-columns: 50% 25% 25%;
+        gap: 50px;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    }
+     .footer-links{
+        line-height: 2.2rem;
+     }
+
+    .footer-links a{
+        display: block;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 1rem;
+        font-weight: 400;
+        /* padding: 10px; */
+        
+    }
+    .footer-links h3{
+        font-size: 1.3rem;
+        color: white;
+        line-height: 120%;
+        font-weight: 700;
+        margin-bottom: 2rem;
+    }
+    .copyright{
+        text-align: center;
+        padding: 20px;
+        color: rgba(255, 255, 255, 0.5);
+        font-family: Inter;
+        font-size: 0.9rem;
+        font-weight: 400;
+        line-height: 24px;
+    }
 
   /* responsive design */
+    /* smaller screen*/
+@media screen and (max-width: 400px) {
+    .title {
+        font-size: 2rem;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .navbar {
+        padding: 15px 10px;
+        justify-content: space-between;
+    }
+    
+    .fitness {
+        font-size: 1.8rem;
+    }
+    
+    .hero-section {
+        max-width: 90%;
+        margin: 30px auto 0;
+    }
+    
+    .links {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .links a {
+        width: 100%;
+        text-align: center;
+        padding: 8px 12px;
+        margin-top: 10px;
+    }
+    
+    .hero-image img {
+        width: 100%;
+        right: 0;
+    }
+    
+    /* Adjust small boxes for mobile */
+    .small-box {
+        width: 40%;
+        padding: 8px;
+    }
+    
+    .first-box {
+        top: 35rem;
+        right: 1rem;
+    }
+    
+    .second-box {
+        top: 50rem;
+        right: 1rem;
+    }
+    
+    .description {
+        font-size: 0.8rem;
+        line-height: 20px;
+    }
+    /* habits section */
+    .habits h2{
+    font-size: 1.8rem;
+    }
+   
+    
+}
+
   /* mobile screen */
     @media screen and (max-width: 768px) {
         .menu-icon {
@@ -194,9 +638,102 @@
             top: 60rem;
         
         }
+        .image-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin: 0 auto;
+    }
+    .image-container img {
         
+        margin: 0 auto;
+             
+    }
+        /* habit section */
+        .habit-images{
+            grid-template-columns: 1fr;
+            
+        }
+    /* shared styles */
+        .habits h2, .run h2, .training h2, .bmi h2, .team h2{
+    font-size: 1.8rem;
+}
+    /* run section */
+    .run{
+        flex-direction: column;
+        margin-top: 70px;
+        margin-bottom: 0px;
+    }
+    .run > div{
+        width: 100%;
+    }
+    .run-image img{
+        width: 100%;
+    }
+    .run-container a{
+        width: 100%;
+        background: rgb(230, 83, 60);
+        border: none;
+    }
+
+    /* training */
+    .training{
+        margin-top: 70px;
+    }
+    .row-1{
+        grid-template-columns: 55% 45% ;
+    }
+    .row-2{
+        grid-template-columns: 50% 50% ;
+    }
+    .image-box p{
+        font-size: 0.8rem;
+    }
+    /* shared hide */
+    .hide{
+        display: none;
+    }
+
+    /* bmi section */
+     .calculator-container{
+        flex-direction: column;
+        max-width: 100%;
+        padding: 20px;
+     }
+     .calculator-container > div{
+        width: 100%;
+    }
+    .bmi-table{
+        margin: 20px auto;
+    }
+    .input-group-2 select{
+        width: 99%;
+    }
+    .calculator-item h3{
+        font-size: 1rem;
+    }
+
+    /* bmi section */
+    .trainer-images{
+        grid-template-columns: 1fr;
+    }
+    /* footer */
+    .footer-container{
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        padding-top: 30px;
+        padding-bottom: 0px;
+        gap: 20px;
         
     }
+    .footer-logo{
+        font-size: 3rem;
+    }
+
+
+}
+    
     /* tablet screen */
     @media screen and (min-width: 768px) and (max-width: 992px) {
         .hero-section{
@@ -205,6 +742,7 @@
         .hero-section > div{
             width: 100%;
         }
+        
         .first-box{
             top: 650px;
             right: 180px;
@@ -221,9 +759,109 @@
         .small-box{
             width: 20%;
         }
-        .image-container img{
-            margin: 0 auto;
-            border: 1px solid red;
-        }
+       .image-container{
+        
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .image-container img {
+        
+        margin: 0 auto;
+        padding-right: 150px;      
+    }
+    /* habits section */
+    .habit-images{
+        grid-template-columns: repeat(2, 1fr);
         
     }
+
+    /* run section */
+     .run{
+        max-width: 90%;
+        margin-bottom: 0px;
+     }
+    .run-image img{
+        width: 100%;
+        height: 90%;
+        border-radius: 20px;
+        margin-right: 10px;
+        
+    }
+     .run-container a{
+        width: 40%;
+        background: rgb(230, 83, 60);
+    
+    }
+    /* bmi section */
+    .calculator-container{
+       padding-top: 0px;
+       padding-bottom: 20px;
+       max-width: 100%;
+       flex-direction: column;
+    }
+    .calculator-container > div{
+        width: 100%;
+    }
+    .calculator-item{
+        margin-top: 30px;
+    }
+    /* trainer section */
+    .trainer-images{
+        max-width: 95%;
+    }
+    /* footer */
+/* Footer Section */
+.footer-container {
+    display: grid;
+    grid-template-columns: 1fr; /* First div takes full width */
+    grid-template-rows: auto auto auto; /* Each section (div) takes height automatically */
+    gap: 20px; /* Space between rows */
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* First div (logo and description) */
+.footer > div:first-child {
+    grid-row: 1; /* Place first div in the first row */
+    margin-bottom: 30px; /* Space between the first div and the second div */
+}
+
+/* Footer Links Styling (side by side) */
+.footer-links {
+    display: flex;
+    flex-direction: column; /* Stack links vertically inside each div */
+}
+
+/* To place the second and third divs side by side */
+.footer-container > .footer-links:nth-child(2),
+.footer-container > .footer-links:nth-child(3) {
+    grid-column: span 1; /* Make sure they only take up 1 column */
+    grid-row: 2; /* Place second and third divs in the second row */
+}
+
+/* Make the second and third divs (links) appear side by side */
+.footer-container > .footer-links:nth-child(2) {
+    margin-right: 4%; /* Space between the two link divs */
+}
+
+.footer-container > .footer-links:nth-child(3) {
+    margin-right: 0;  /* Remove margin from the last div */
+    justify-content: flex-start;
+    
+}
+
+/* Ensure the second and third divs take up equal space */
+.footer-container > .footer-links:nth-child(2),
+.footer-container > .footer-links:nth-child(3) {
+    width: 100%;
+}
+
+
+
+
+}
